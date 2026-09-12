@@ -1,6 +1,6 @@
 'use client';
 
-import {useEffect,useState} from 'react';
+import {useState} from 'react';
 import {Check,ChevronRight,ExternalLink,Grid3X3,Image as ImageIcon,Puzzle,Sparkles} from 'lucide-react';
 
 const games=[
@@ -11,8 +11,7 @@ const games=[
 
 export default function Home(){
  const [visited,setVisited]=useState<string[]>([]);
- useEffect(()=>{try{setVisited(JSON.parse(localStorage.getItem('knowme-games-visited')||'[]'))}catch{}},[]);
- const markVisited=(id:string)=>{setVisited(current=>{if(current.includes(id))return current;const next=[...current,id];localStorage.setItem('knowme-games-visited',JSON.stringify(next));return next})};
+ const markVisited=(id:string)=>setVisited(current=>current.includes(id)?current:[...current,id]);
  return <main className="hub-shell">
   <nav className="hub-nav" aria-label="主選單"><a className="hub-brand" href="#top"><span className="brand-mark"><i/><i/><i/></span><span><strong>認識你真好～遊戲區</strong><small>快樂遊戲屋</small></span></a><a href="#games">遊戲選單</a></nav>
   <section className="hub-hero" id="top"><div className="hero-copy"><p className="hero-kicker"><Sparkles/>認識你真好～遊戲區</p><h1>今天想玩<br/><em>哪一個遊戲？</em></h1><p>六位動物朋友歡樂合作！三個遊戲都能自由選擇，不必按照順序。</p><a className="hero-jump" href="#games">選擇遊戲 <ChevronRight/></a></div><div className="hero-art"><span className="motion-note note-one">♪</span><span className="motion-note note-two">✦</span><img src="/game-friends.png" alt="鸚鵡、穿山甲、羊駝、水豚、小熊貓和水獺一起合作玩遊戲"/><span className="art-sticker">合作樂無窮！</span></div></section>
