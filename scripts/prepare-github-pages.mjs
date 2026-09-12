@@ -11,8 +11,9 @@ async function rewrite(directory) {
     else if (textFiles.has(extname(entry.name))) {
       const source = await readFile(path, 'utf8');
       const updated = source
-        .replaceAll('/_next/', '/ruru-copypaly/_next/')
-        .replaceAll('/favicon.svg', '/ruru-copypaly/favicon.svg');
+        .replaceAll('/_next/', '/ruru-knowme-eplay/_next/')
+        .replaceAll('/favicon.svg', '/ruru-knowme-eplay/favicon.svg')
+        .replaceAll('/game-friends.png', '/ruru-knowme-eplay/game-friends.png');
       if (updated !== source) await writeFile(path, updated);
     }
   }
