@@ -5,7 +5,7 @@ import {Check,ChevronRight,ExternalLink,Grid3X3,Image as ImageIcon,Puzzle,Sparkl
 
 const games=[
  {id:'match',number:'01',title:'圖形配對遊戲',description:'匯入自己的圖片，翻開兩張牌找出相同圖案；牌面固定用上下兩列呈現。',icon:Grid3X3,color:'coral',url:'https://ruru-co1058.github.io/ruru-copypaly/'},
- {id:'named',number:'02',title:'圖面名字連連看',description:'看人物照片，從三個容易混淆的字中，依序選出正確姓名。',icon:ImageIcon,color:'teal',url:'https://ruru-co1058.github.io/ruru-named-play/'},
+ {id:'named',number:'02',title:'圖片姓名三選一',description:'看人物照片，從三個容易混淆的字中，依序選出正確姓名。',icon:ImageIcon,color:'teal',url:'https://ruru-co1058.github.io/ruru-named-play/'},
  {id:'puzzle',number:'03',title:'照片拼圖小遊戲',description:'選擇照片與難度，移動拼圖片完成挑戰，也可以進行雙人 PK。',icon:Puzzle,color:'yellow',url:'https://ruru-co1058.github.io/ruru-puzzleplay/'},
 ] as const;
 
