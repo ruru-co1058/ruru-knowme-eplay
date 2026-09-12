@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: '圖片配對小高手｜自訂圖片翻牌遊戲',
-  description: '自行匯入多張圖片，翻牌找出相同的兩張；配對正確會留在原位，關閉網頁後圖片自動刪除。',
+  title: '認識你真好｜快樂遊戲屋',
+  description: '配對、拼圖和連連看，三個簡單又有趣的動腦遊戲都在這裡。',
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
